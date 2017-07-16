@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.scorecounter.ahsan.scorecounter.MainActivity">
+
+    <!--<ListView-->
+        <!--android:layout_width="180dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="@android:color/holo_blue_dark" />-->
+
+    <!--<ListView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/colorAccent" />-->
+
+    <!--<TextView-->
+        <!--android:text="Score Board"-->
+        <!--android:layout_width="300sp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/textView3"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:textSize="30sp"-->
+        <!--android:textAlignment="center"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true" />-->
+
+
+    <!--<GridView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:columnWidth="100dp"-->
+        <!--android:numColumns="auto_fit"-->
+        <!--android:stretchMode="columnWidth"-->
+        <!--/>-->
+
+    <Button
+        android:text="Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:id="@+id/TeamAButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="26dp"
+        android:onClick="ScoreUpA" />
+
+    <TextView
+        android:text="Score A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/NameTeamA"
+        android:textSize="36sp"
+        android:layout_above="@+id/TeamAButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="180dp" />
+
+    <TextView
+        android:text="Score B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp"
+        android:id="@+id/NameTeamB"
+        android:textSize="36sp"
+        android:layout_alignBaseline="@+id/NameTeamA"
+        android:layout_alignBottom="@+id/NameTeamA"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="61dp"
+        android:id="@+id/ScoreNumberA"
+        android:textSize="30sp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:layout_below="@+id/NameTeamB"
+        android:layout_alignLeft="@+id/TeamAButton"
+        android:layout_alignStart="@+id/TeamAButton" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ScoreNumberB"
+        android:textSize="30sp"
+        android:layout_marginRight="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_alignBaseline="@+id/ScoreNumberA"
+        android:layout_alignBottom="@+id/ScoreNumberA"
+        android:layout_alignRight="@+id/TeamBButton"
+        android:layout_alignEnd="@+id/TeamBButton" />
+
+    <Button
+        android:text="Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TeamBButton"
+        android:onClick="ScoreUpB"
+        android:layout_below="@+id/NameTeamA"
+        android:layout_alignRight="@+id/NameTeamB"
+        android:layout_alignEnd="@+id/NameTeamB" />
+
+    <Button
+        android:text="Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ScoreNumberA"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:id="@+id/ResetButton"
+        android:onClick="Reset" />
+
+</RelativeLayout>
